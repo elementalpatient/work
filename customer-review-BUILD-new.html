@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>.</title>
+    <style>
+        .crwrap {
+            border: 0px solid #000;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .crcon {
+            border: 2px solid #000;
+            flex: 1 1 0;
+        }
+        .crcon2 {
+            border: 0px solid #000;
+            border-radius: 16px;
+            background-color: hsl(40, 60, 93);
+            background-image: url('pub/media/wysiwyg/brand/1000x900.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 500px 500px;
+            overflow-y: auto;
+            height: 500px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            align-items: center;
+        }
+        .crcon2::-webkit-scrollbar {
+            display: none;
+        }
+        .crmilli {
+            color: #f4c715;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .crhead {
+            color: #1d1d1d;
+            text-align: center;
+            font-size: 32px;
+        }
+        .mbi-para {
+            color: black;
+            text-align: center;
+        }
+
+        .aztitle,
+        .ebtitle,
+        .gtitle {
+            color: #000;
+            text-align: center;
+            font-weight: 900;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .view {
+            border: 0px solid #000;
+            flex-shrink: 1;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .zoom {
+            background-color: transparent;
+            transition: transform .3s;
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .zoom:hover {
+            transform: scale(1.2);
+        }
+
+        .img-fluid {
+            opacity: .69;
+            display: flex;
+            border: 0px solid #000;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0px 0px 3px .5px rgba(0, 0, 0, 0.253);
+        }
+
+        .downpos {
+            border: 0px solid rgb(0, 0, 0);
+            width: 100%;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .downarr {
+            border: 0x solid #000;
+            display: flex;
+        }
+        .downarr::before, .downarr::after {
+            font-family: 'FontAwesome';
+            content: "\f063";
+            font-weight: 900;
+            font-size: 40px;
+            color: #f4c715;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .word4 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        hr.rule {
+        border: 0;
+        height: 1px;
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(#f4c715), to(rgba(0, 0, 0, 0)));
+        background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #f4c715, rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #f4c715, rgba(0, 0, 0, 0));
+        -webkit-filter: drop-shadow(2px 50px 5px 1px #000);
+        filter: drop-shadow(2px 50px 5px 1px #000);
+    }
+
+        @media screen and (max-width: 1025px) {
+
+            /* start of large tablet styles */
+            .crcon2 {
+                background-color: rgba(255, 255, 255, 0.288);
+                background-image: url('pub/media/wysiwyg/brand/1000x900.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 300px 300px;
+            }
+
+            .view {
+                padding-bottom: 8px !important;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .zoom:hover {
+                transform: none !important;
+            }
+
+            .word4 {
+                font-size: 30px;
+                margin-bottom: 10px;
+
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            /* start of medium tablet styles */
+            .crcon2 {
+                background-color: rgba(255, 255, 255, 0.288);
+                background-image: url('pub/media/wysiwyg/brand/1000x900.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 500px 400px;
+            }
+
+            .view {
+                padding-bottom: 8px !important;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .zoom:hover {
+                transform: none !important;
+            }
+
+            .word4 {
+                font-size: 24px;
+                margin-bottom: 10px;
+
+            }
+        }
+
+        @media screen and (max-width: 479px) {
+
+            /* start of phone styles */
+            .crmilli {
+                padding-bottom: 10px;
+                font-size: 24px;
+            }
+            .crhead {
+                font-size: 
+            }
+            .crcon2 {
+                background-color: rgba(255, 255, 255, 0.288);
+                background-image: url('pub/media/wysiwyg/brand/1000x900.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 250px 250px;
+                height: 370px!important;
+            }
+
+            .view {
+                padding-bottom: 5px !important;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .zoom:hover {
+                transform: none !important;
+            }
+
+            .word4 {
+                font-size: 24px;
+                margin-bottom: 10px;
+
+            }
+            .img-fluid {
+                opacity: .8;
+            }
+            .aztitle,
+            .ebtitle,
+            .gtitle {
+                font-size: 14px;
+            color: #000;
+            text-align: center;
+            font-weight: 700;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        }
+
+        @media screen and (min-width: 280px) and (max-width: 350px) {
+            .word4 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="crwrap">
+        <div class="crcon1">
+            <h1 class="crmilli"> OVER ONE MILLION ORDERS PROCESSED & SHIPPED FROM OUR FACILITY!</h1>
+            <h1 class="crhead">Almost seems to good to be true, right?</h1>
+            <br>
+            <p class="mbi-para"> MBI Auto (Bumpers That Deliver) has been the #1 trusted source for automotive aftermarket
+                replacement parts on eBay & Amazon for over 10 years. 100% customer satisfaction is, and always has been
+                our
+                #1 priority. We strive to offer the lowest prices while maintaining high standards of quality. Mistakes
+                happen, we will be
+                the first to admit that. When mistakes do happen we take strategic measures throughout our company to
+                make
+                sure we can prevent any and all mistakes in the future. These are real people, with real experiences. <br>
+                <br></p>
+            <hr class="rule">
+            <div class="downarr">
+                <div class="downpos">
+                    <div class="word4">
+                        <i>Don't just take our word for it, take theirs!</i>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="crcon2">
+                <h2 class="aztitle">Over on Amazon</h2>
+                <!--START AMAZON IMAGES-->
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="129"}}
+                <!--END AMAZON IMAGES-->
+                <!--START EBAY BUMPER OUTLET IMAGES-->
+                <h2 class="ebtitle">...on eBay</h2>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="130"}}
+                <!--END BUMPER OUTLET IMAGES-->
+                <!--START MBI AUTO EBAY IMAGES-->
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="131"}}
+                <!--END MBI AUTO EBAY IMAGES-->
+                <!--START GOOGLE IMAGES-->
+                <h2 class="gtitle">......and over on Google</h2>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="132"}}
+                <!--END GOOGLE IMAGES-->
+            </div>
+        </div>
+    </div>
+</body>
